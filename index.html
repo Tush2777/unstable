@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Kenyan High School | Excellence & Unity</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Splide.js for Gallery -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <!-- AOS Animate on Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-[#181f1b] dark:via-[#1e2a22] dark:to-[#20302d] font-inter text-gray-900 dark:text-gray-100 transition-colors duration-700">
+  <!-- Animated Particles Background -->
+  <div id="particles-bg"></div>
+
+  <!-- Header / Nav -->
+  <header class="backdrop-blur-lg bg-white/40 dark:bg-gray-900/60 shadow-md neumorph-hd sticky top-0 z-30">
+    <nav class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+      <div class="flex items-center gap-3">
+        <img src="logo.jpeg" alt="school logo" class="w-10 h-10 rounded-full shadow-lg bg-white/80 p-1" />
+        <span class="font-bold text-xl tracking-wider text-green-700 dark:text-green-300">Wachoro School</span>
+      </div>
+      <ul class="hidden md:flex gap-8 font-semibold">
+        <li><a href="#announcements" class="nav-link">Announcements</a></li>
+        <li><a href="#events" class="nav-link">Events</a></li>
+        <li><a href="#fees" class="nav-link">Fees</a></li>
+        <li><a href="#admissions" class="nav-link">Admissions</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#tenders" class="nav-link">Tenders</a></li>
+        <li><a href="#history" class="nav-link">History</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+      <!--  <button id="portal-btn" class="bg-gradient-to-r from-green-600 to-green-400 hover:from-green-700 hover:to-green-500 text-white px-3 py-1 rounded-full shadow-lg font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-300 text-sm">Student Portal</button>-->
+        <button id="theme-toggle" class="ml-2 p-2 rounded-full bg-gray-100 dark:bg-gray-800 shadow" aria-label="Toggle dark mode">
+          <i data-feather="moon"></i>
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-800">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Nav -->
+    <div id="mobile-nav" class="md:hidden hidden px-6 pb-3 bg-white/90 dark:bg-gray-900/90">
+      <ul class="flex flex-col gap-2 font-semibold">
+        <li><a href="#announcements" class="nav-link">Announcements</a></li>
+        <li><a href="#events" class="nav-link">Events</a></li>
+        <li><a href="#fees" class="nav-link">Fees</a></li>
+        <li><a href="#admissions" class="nav-link">Admissions</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#tenders" class="nav-link">Tenders</a></li>
+        <li><a href="#history" class="nav-link">History</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section --><!--
+<!-- Hero Section -->
+<section id="hero" class="hero-section" style="background-image: url('https://lh3.googleusercontent.com/p/AF1QipMnOmnHEq7EsQA53bnnw8qZsp1VC8uYYuML1RZl=s1646-w846-h1646-rw');">
+  <div class="hero-content">
+    <h1>Welcome to Wachoro High School</h1>
+    <p>Education for a Brighter Future</p>
+    <a href="#admissions" class="btn-admission">Apply for Admission</a>
+  </div>
+</section>
+    
+    <!-- Floating AI Chat Bot Button -->
+    <button id="ai-chat-btn" title="Ask School Assistant AI" class="fixed bottom-8 right-8 z-40 bg-blue-600 hover:bg-blue-800 text-white p-4 rounded-full shadow-2xl flex items-center justify-center focus:outline-none transition-all animate-bounce">
+      <i data-feather="message-circle" class="w-6 h-6 mr-1"></i>
+      <span class="hidden sm:inline font-bold">AI Assistant</span>
+    </button>
+        
+    <button id="portal-btn" class="fixed bottom-8 left-8 z-20 bg-gradient-to-r from-green-600 to-green-400 hover:from-green-700 hover:to-green-500 text-white p-4 rounded-full shadow-lg font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-300 text-sm animate-bounce">Student Portal</button>
+  
+  
+
+  <!-- Announcements Section -->
+  <section id="announcements" class="py-12 px-4 max-w-5xl mx-auto" data-aos="fade-up">
+    <div class="flex items-center mb-4">
+      <i data-feather="volume-2" class="text-green-600 w-7 h-7 mr-2"></i>
+      <h2 class="text-2xl font-bold">Latest Announcements</h2>
+      <button id="ann-panel-open" class="ml-auto px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 rounded-full flex items-center text-blue-600 font-semibold shadow transition-all">
+        <i data-feather="list" class="mr-1"></i> View All
+      </button>
+    </div>
+    <div id="announcement-bar" class="bg-white/70 dark:bg-gray-800/70 rounded-xl px-4 py-4 shadow-lg neumorph-card overflow-x-auto whitespace-nowrap flex gap-6 announcement-bar">
+      <!-- Dynamic Announcements Here -->
+    </div>
+  </section>
+  <!-- Announcements Panel Modal -->
+  <div id="ann-panel-modal" class="fixed z-50 inset-0 hidden bg-black/50 flex items-center justify-center">
+    <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl max-w-lg w-full p-8 relative neumorph-card">
+      <h3 class="text-2xl font-bold mb-3 flex items-center gap-2 text-blue-700 dark:text-blue-300">
+        <i data-feather="volume-2"></i> Announcements Panel
+      </h3>
+      <ul id="announcements-list" class="divide-y divide-gray-200 dark:divide-gray-700">
+        <!-- Dynamic List -->
+      </ul>
+      <button id="ann-panel-close" class="absolute top-4 right-4 p-2 bg-gray-200 dark:bg-gray-800 rounded-full shadow hover:bg-gray-300 dark:hover:bg-gray-700">
+        <i data-feather="x"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mpesa Fees Payment Section -->
+  <section id="fees" class="py-12 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 px-4" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto rounded-2xl p-8 shadow-2xl bg-white/80 dark:bg-gray-900/90 glass-card relative overflow-hidden">
+      <div class="flex items-center mb-4">
+        <img src="https://www.safaricom.co.ke/images/main.png" alt="Safaricom" class="w-28 h-10 object-contain mr-3" />
+        <h2 class="text-2xl font-bold text-green-700 dark:text-green-300">Mpesa Fees Payment</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <ol class="list-decimal list-inside text-lg space-y-2 text-gray-800 dark:text-gray-100 font-medium">
+            <li>Open your <span class="font-bold text-green-600">Mpesa</span> menu</li>
+            <li>Select <span class="font-bold text-green-600">Lipa na Mpesa</span></li>
+            <li>Choose <span class="font-bold text-green-600">Paybill</span></li>
+            <li>Enter <span class="font-bold text-blue-600">522533</span> as the Business Number</li>
+            <li>Enter <span class="font-bold text-blue-700">adm2777</span> as your Account Number</li>
+            <li>Enter the <span class="font-bold text-green-700">amount</span></li>
+            <li>Enter your <span class="font-bold text-green-700">Mpesa PIN</span> and send</li>
+          </ol>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/color/96/000000/mpesa.png" alt="Mpesa Logo" class="w-24 h-24 drop-shadow mb-2" />
+          <div class="bg-white/80 dark:bg-green-900/60 px-6 py-4 rounded-xl shadow-lg flex flex-col items-center gap-2">
+            <span class="font-semibold text-green-700 dark:text-green-300">Paybill: <span class="text-blue-700 dark:text-blue-400 font-bold">522533</span></span>
+            <span class="font-semibold text-green-700 dark:text-green-300">Account: <span class="text-blue-700 dark:text-blue-400 font-bold">adm2777</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="py-12 px-4 max-w-6xl mx-auto" data-aos="fade-up">
+    <div class="flex items-center mb-4">
+      <i data-feather="calendar" class="text-yellow-600 w-7 h-7 mr-2"></i>
+      <h2 class="text-2xl font-bold">School Events</h2>
+    </div>
+    <div id="events-list" class="grid md:grid-cols-3 gap-7">
+      <!-- Dynamic events from JSON -->
+    </div>
+  </section>
+
+  <!-- Latest News Section -->
+  <section id="news" class="py-12 px-4 max-w-5xl mx-auto" data-aos="fade-up">
+    <div class="flex items-center mb-4">
+      <i data-feather="alert-circle" class="text-red-600 w-7 h-7 mr-2"></i>
+      <h2 class="text-2xl font-bold">Latest News</h2>
+    </div>
+    <div id="news-list" class="flex gap-5 overflow-x-auto pb-4">
+      <!-- News Cards -->
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-12 px-4 max-w-6xl mx-auto" data-aos="fade-up">
+    <div class="flex items-center mb-4">
+      <i data-feather="image" class="text-indigo-600 w-7 h-7 mr-2"></i>
+      <h2 class="text-2xl font-bold">Gallery</h2>
+    </div>
+    <div id="splide" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <!-- Images will be injected by JS -->
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memories / Google Photos Section -->
+  <section id="memories" class="py-12 px-4 max-w-5xl mx-auto" data-aos="fade-up">
+    <div class="flex items-center mb-4">
+      <i data-feather="camera" class="text-pink-700 w-7 h-7 mr-2"></i>
+      <h2 class="text-2xl font-bold">Best school Memories (Google Photos)</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <a href="https://photos.google.com" target="_blank" class="mem-link bg-white/70 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl flex items-center gap-3 p-4 shadow hover:scale-105 transition-all">
+        <img src="https://img.icons8.com/color/48/000000/google-photos-new.png" alt="Google Photos" class="w-10 h-10" />
+        <span class="font-semibold">2024 Graduation Day</span>
+      </a>
+      <a href="https://photos.google.com" target="_blank" class="mem-link bg-white/70 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl flex items-center gap-3 p-4 shadow hover:scale-105 transition-all">
+        <img src="https://img.icons8.com/color/48/000000/google-photos-new.png" alt="Google Photos" class="w-10 h-10" />
+        <span class="font-semibold">2023 Sports Festival</span>
+      </a>
+      <a href="https://photos.google.com" target="_blank" class="mem-link bg-white/70 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-xl flex items-center gap-3 p-4 shadow hover:scale-105 transition-all">
+        <img src="https://img.icons8.com/color/48/000000/google-photos-new.png" alt="Google Photos" class="w-10 h-10" />
+        <span class="font-semibold">Prefects Leadership Camp</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Student Reviews Section -->
+  <section id="reviews" class="py-12 px-4 max-w-5xl mx-auto" data-aos="fade-up">
+    <div class="flex items-center mb-4">
+      <i data-feather="star" class="text-yellow-500 w-7 h-7 mr-2"></i>
+      <h2 class="text-2xl font-bold">Student Reviews</h2>
+    </div>
+    <div id="reviews-carousel" class="relative">
+      <div id="review-content" class="bg-white/70 dark:bg-gray-800/80 rounded-xl p-6 shadow-lg neumorph-card text-center flex flex-col items-center min-h-[180px]">
+        <!-- Review will be injected by JS -->
+      </div>
+      <div class="flex justify-center gap-3 mt-4">
+        <button id="prev-review" class="p-2 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600"><i data-feather="chevron-left"></i></button>
+        <button id="next-review" class="p-2 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600"><i data-feather="chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tenders Section -->
+  <section id="tenders" class="py-12 px-4 max-w-5xl mx-auto" data-aos="fade-up">
+    <div class="flex items-center mb-4">
+      <i data-feather="file-text" class="text-orange-600 w-7 h-7 mr-2"></i>
+      <h2 class="text-2xl font-bold">Available Tenders</h2>
+    </div>
+    <div id="tenders-list" class="grid md:grid-cols-2 gap-6">
+      <!-- Tenders will be loaded from JSON -->
+    </div>
+  </section>
+
+  <!-- School History Section -->
+  <section id="history" class="py-12 px-4 max-w-5xl mx-auto" data-aos="fade-up">
+    <div class="flex items-center mb-4">
+      <i data-feather="book-open" class="text-blue-600 w-7 h-7 mr-2"></i>
+      <h2 class="text-2xl font-bold">Our History</h2>
+    </div>
+    <ol class="relative border-l border-green-400 dark:border-green-700 ml-4">
+      <li class="mb-10 ml-8 aos-animate" data-aos="fade-right">
+        <span class="absolute -left-4 flex items-center justify-center w-8 h-8 bg-green-600 rounded-full ring-8 ring-white dark:ring-gray-900 text-white font-bold">1998</span>
+        <div class="bg-white/80 dark:bg-gray-800/70 p-6 rounded-xl shadow-md neumorph-card">
+          <h3 class="font-bold text-lg mb-2 text-green-700 dark:text-green-300">Founded</h3>
+          <p>Wachoro High School was established in Nairobi, with a mission to empower youth through quality education and unity.</p>
+        </div>
+      </li>
+      <li class="mb-10 ml-8 aos-animate" data-aos="fade-right" data-aos-delay="100">
+        <span class="absolute -left-4 flex items-center justify-center w-8 h-8 bg-green-600 rounded-full ring-8 ring-white dark:ring-gray-900 text-white font-bold">2005</span>
+        <div class="bg-white/80 dark:bg-gray-800/70 p-6 rounded-xl shadow-md neumorph-card">
+          <h3 class="font-bold text-lg mb-2 text-green-700 dark:text-green-300">First KCSE Graduates</h3>
+          <p>The school celebrated its first KCSE graduating class, with 92% transition to university and tertiary colleges.</p>
+        </div>
+      </li>
+      <li class="mb-10 ml-8 aos-animate" data-aos="fade-right" data-aos-delay="200">
+        <span class="absolute -left-4 flex items-center justify-center w-8 h-8 bg-green-600 rounded-full ring-8 ring-white dark:ring-gray-900 text-white font-bold">2023</span>
+        <div class="bg-white/80 dark:bg-gray-800/70 p-6 rounded-xl shadow-md neumorph-card">
+          <h3 class="font-bold text-lg mb-2 text-green-700 dark:text-green-300">Awarded Best in Nairobi</h3>
+          <p>Wachoro High School received the Best School award for academic excellence and innovation in Nairobi County.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Admissions Button (CTA) -->
+  <section id="admissions" class="py-12 px-4 max-w-5xl mx-auto" data-aos="zoom-in">
+    <div class="bg-gradient-to-r from-green-600 to-green-400 dark:from-green-900 dark:to-green-700 rounded-2xl p-8 shadow-xl glass-card flex flex-col md:flex-row items-center gap-6">
+      <div class="flex-1 mb-4 md:mb-0">
+        <h2 class="text-2xl font-bold text-white mb-2">Admissions Now Open!</h2>
+        <p class="text-lg text-green-50 mb-3">Apply today to join Wachoro High School and become part of our tradition of excellence.</p>
+        <a href="admissions.html" class="inline-flex items-center gap-2 bg-white text-green-700 font-bold px-6 py-2 rounded-full shadow hover:bg-green-50 transition-all">
+          <i data-feather="arrow-right" class="w-5 h-5"></i> Go to Admissions
+        </a>
+      </div>
+      <div class="flex-1 flex flex-col items-center">
+        <img src="https://img.icons8.com/color/96/000000/school-building.png" alt="Admissions" class="w-24 h-24 mb-2" />
+        <div class="text-white font-bold text-lg">We welcome all learners!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-16 py-8 bg-gradient-to-r from-green-700 to-blue-800 dark:from-green-900 dark:to-blue-900 text-white neumorph-hd shadow-inner">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-4 px-4">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <img src="https://img.icons8.com/color/48/000000/school.png" alt="school logo" class="w-8 h-8 rounded-full" />
+          <span class="font-bold text-lg">Wachoro High School</span>
+        </div>
+        <div class="text-green-50">Nairobi, Kenya | excellence@unityhigh.ac.ke</div>
+        <div class="text-green-50">Tel: +254 712 345678</div>
+      </div>
+      <div class="flex gap-4 items-center">
+        <a href="#gallery" class="hover:underline">Gallery</a>
+        <a href="#admissions" class="hover:underline">Admissions</a>
+        <a href="#events" class="hover:underline">Events</a>
+        <a href="#tenders" class="hover:underline">Tenders</a>
+      </div>
+      <div class="flex gap-3 items-center">
+        <a href="#" class="hover:text-yellow-300"><i data-feather="facebook"></i></a>
+        <a href="#" class="hover:text-blue-300"><i data-feather="twitter"></i></a>
+        <a href="#" class="hover:text-pink-300"><i data-feather="instagram"></i></a>
+      </div>
+    </div>
+    <div class="text-center text-green-100 mt-7 text-sm">&copy; 2024 Wachoro High School — All Rights Reserved.</div>
+  </footer>
+
+  <!-- AI Chatbot Modal -->
+  <div id="ai-chat-modal" class="fixed z-50 inset-0 hidden bg-black/30 flex items-center justify-center">
+    <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-md w-full p-8 neumorph-card relative">
+      <button id="ai-chat-close" class="absolute top-4 right-4 p-2 bg-gray-200 dark:bg-gray-800 rounded-full shadow hover:bg-gray-300 dark:hover:bg-gray-700">
+        <i data-feather="x"></i>
+      </button>
+      <h3 class="text-xl font-bold flex items-center gap-2 mb-2 text-blue-700 dark:text-blue-300">
+        <i data-feather="message-circle"></i> School Assistant AI
+      </h3>
+      <div class="min-h-[120px] flex items-center justify-center text-gray-500 dark:text-gray-400 italic text-center">
+        <span>AI Chat Assistant coming soon. Ask anything about the school, admissions, events, and more!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    feather.replace();
+    AOS.init({ once: true });
+  </script>
+</body>
+</html>

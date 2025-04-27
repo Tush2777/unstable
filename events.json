@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Science Fair",
+    "description": "Showcasing innovations from our talented students and invited schools.",
+    "date": "2024-07-04",
+    "location": "School Auditorium"
+  },
+  {
+    "title": "Sports Day",
+    "description": "Inter-house competitions in athletics, football, volleyball and more.",
+    "date": "2024-07-20",
+    "location": "School Sports Field"
+  },
+  {
+    "title": "Music & Drama Festival",
+    "description": "Experience vibrant performances from our creative arts department.",
+    "date": "2024-08-12",
+    "location": "Main Hall"
+  }
+]

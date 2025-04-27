@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Midterm Exams Begin",
+    "description": "Midterm exams will commence on 14th June. All students must be present.",
+    "date": "2024-06-10"
+  },
+  {
+    "title": "Parents Meeting",
+    "description": "All parents are invited for the annual meeting on 21st June at the school hall.",
+    "date": "2024-06-05"
+  },
+  {
+    "title": "School Clubs Registration",
+    "description": "Club registration is open for all students. Deadline: 15th June.",
+    "date": "2024-06-01"
+  },
+  {
+    "title":"Closing of school",
+    "description":"Schools will be closed on January 17th",
+    "date":"2024-12-01"
+  }
+  
+]

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:wght@400;700&display=swap');
+
+/* Neumorphism & Glassmorphism Effects */
+.neumorph-card {
+  box-shadow: 8px 8px 24px #d3e0e9, -8px -8px 24px #ffffff99;
+  transition: box-shadow .3s;
+}
+body.dark .neumorph-card {
+  box-shadow: 8px 8px 24px #131b18, -8px -8px 24px #27393299;
+}
+.neumorph-hd {
+  box-shadow: 0 4px 32px #e3ecd9, 0 1.5px 0 #fff;
+}
+body.dark .neumorph-hd {
+  box-shadow: 0 4px 32px #0f1d11, 0 1.5px 0 #222;
+}
+.glass-card {
+  backdrop-filter: blur(9px) saturate(120%);
+  background: rgba(255,255,255,0.7);
+}
+body.dark .glass-card {
+  background: rgba(34,44,40,0.65);
+}
+
+.announcement-bar {
+  min-height: 60px;
+}
+
+@keyframes slide-left {
+  0% { transform: translateX(0);}
+  100% { transform: translateX(-60%);}
+}
+
+/* Animated background: subtle noise */
+#particles-bg {
+  position: fixed;
+  z-index: 0;
+  top:0; left:0; width:100vw; height:100vh;
+  pointer-events:none;
+  background: url('https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets/noise.png');
+  opacity: 0.14;
+}
+
+/* Hero Kenya Motif */
+.hero-bg {
+  background: radial-gradient(circle at 60% 50%, #e4ffee 0%, #aff, #fff 100%);
+}
+.hero-bg-dark {
+  background: radial-gradient(circle at 60% 50%, #1a2d1e 0%, #1e3a22 70%, #0a1c12 100%);
+}
+
+/* For Gallery Splide */
+.splide__slide img {
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px #c8e6c9aa;
+}
+body.dark .splide__slide img {
+  box-shadow: 0 6px 20px #07120caa;
+}
+
+/* Announcements Modal */
+#ann-panel-modal, #ai-chat-modal {
+  transition: background 0.3s;
+}
+#ann-panel-modal.open, #ai-chat-modal.open {
+  display: flex !important;
+  animation: fadeIn .4s;
+}
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+/* Memories Link */
+.mem-link:hover {
+  box-shadow: 0 8px 20px #c8ffd8ad, 0 0px 0 #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #81c784;
+  border-radius: 6px;
+}
+body.dark ::-webkit-scrollbar-thumb {
+  background: #2e7d32;
+}
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+  background: transparent;
+}
+
+
+/* Hero Section */
+.hero-section {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 50px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.btn-admission {
+  background-color: #0080ff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 10px;
+}

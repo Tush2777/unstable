@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Samuel Otieno",
+    "rating": 5,
+    "comment": "Unity High inspired me to dream big. The teachers are supportive and the environment is friendly.",
+    "class": "Form 4",
+    "year": "2023"
+  },
+  {
+    "name": "Amina Njeri",
+    "rating": 4,
+    "comment": "I loved the diversity and the many clubs. Sports day is always fun!",
+    "class": "Form 2",
+    "year": "2024"
+  },
+  {
+    "name": "Brian Mwangi",
+    "rating": 5,
+    "comment": "Great learning facilities and amazing friends. I will miss this school.",
+    "class": "Form 4",
+    "year": "2023"
+  },
+  {
+     "name": "Dennis Mchana",
+    "rating": 5,
+    "comment": "Wachoro we want Best school ever. I will miss this school.",
+    "class": "Form 4",
+    "year": "2023"
+  }
+]
